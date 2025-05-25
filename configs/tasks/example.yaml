@@ -7,7 +7,16 @@
 #   height: int # The shorter the image size, the larger the motion amplitude, and the lower video quality.
 #   width: int #  The longer the W&H, the smaller the motion amplitude, and the higher video quality.
 #   img_length_ratio: float, generation video size is (height, width) * img_length_ratio
-
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/guzhou.png
+  eye_blinks_factor: 1.8
+  height: 846
+  img_length_ratio: 1.248
+  ipadapter_image: ${.condition_images}
+  name: guzhou
+  prompt: (masterpiece, best quality, ultra-realistic), an ancient Chinese fisherman on a wooden boat, snow falling on a quiet lake, misty mountains in the background, soft wind, peaceful and poetic atmosphere, traditional clothes, cinematic lighting, slow camera pan, 4K
+  refer_image: ${.condition_images}
+  video_path: null
+  width: 846
 # text/image2video
 - condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/yongen.jpeg
   eye_blinks_factor: 1.8

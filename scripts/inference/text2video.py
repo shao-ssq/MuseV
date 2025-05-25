@@ -65,7 +65,7 @@ def parse_args():
     parser.add_argument(
         "--target_datas",
         type=str,
-        default="waterfall4",
+        default="guzhou",
         help="Names of the test data to run, to select sub tasks, default=`all`",
     )
     parser.add_argument(
@@ -283,7 +283,7 @@ def parse_args():
     parser.add_argument(
         "--time_size",
         type=int,
-        default=60,
+        default=30,
         help="Number of frames to generate per iteration, same as of training, default=`12`",
     )
     parser.add_argument(
