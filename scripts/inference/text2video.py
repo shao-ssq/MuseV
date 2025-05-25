@@ -56,6 +56,7 @@ def parse_args():
     parser.add_argument(
         "-test_data_path",
         type=str,
+        default="D:\\PyCharmWorkSpace\\VH\\MuseV\\configs\\tasks\\example.yaml",
         help=(
             "Path to the test data configuration file, now only support yaml ext, "
             "task file simialr to musev/configs/tasks/example.yaml"
@@ -64,25 +65,25 @@ def parse_args():
     parser.add_argument(
         "--target_datas",
         type=str,
-        default="all",
+        default="waterfall4",
         help="Names of the test data to run, to select sub tasks, default=`all`",
     )
     parser.add_argument(
         "--sd_model_cfg_path",
         type=str,
-        default=os.path.join(PROJECT_DIR, "configs/model/T2I_all_model.py"),
+        default="D:\\PyCharmWorkSpace\\VH\\MuseV\\configs\\model\\T2I_all_model.py",
         help="Path to the model configuration file",
     )
     parser.add_argument(
         "--sd_model_name",
         type=str,
-        default="all",
+        default="majicmixRealv6Fp16",
         help="Names of the models to run, or path.",
     )
     parser.add_argument(
         "--unet_model_cfg_path",
         type=str,
-        default=os.path.join(PROJECT_DIR, "./configs/model/motion_model.py"),
+        default="D:\\PyCharmWorkSpace\\VH\\MuseV\\configs\\model\\motion_model.py",
         help="Path to motion_cfg path or motion unet path",
     )
     parser.add_argument(
@@ -97,13 +98,13 @@ def parse_args():
     parser.add_argument(
         "--lcm_model_cfg_path",
         type=str,
-        default=os.path.join(PROJECT_DIR, "./configs/model/lcm_model.py"),
+        default="D:\\PyCharmWorkSpace\\VH\\MuseV\\configs\\model\\lcm_model.py",
         help="Path to lcm lora path",
     )
     parser.add_argument(
         "--lcm_model_name",
         type=str,
-        default=None,
+        default="lcm",
         help="lcm model name, None means do not use lcm_lora default=`None`",
         choices=[
             "lcm",
@@ -112,39 +113,39 @@ def parse_args():
     parser.add_argument(
         "--referencenet_model_cfg_path",
         type=str,
-        default=os.path.join(PROJECT_DIR, "./configs/model/referencenet.py"),
+        default="D:\\PyCharmWorkSpace\\VH\\MuseV\\configs\\model\\referencenet.py",
         help="Path to referencenet model config path",
     )
     parser.add_argument(
         "--referencenet_model_name",
         type=str,
-        default=None,
+        default="musev_referencenet",
         help="referencenet model name, None means do not use referencenet, default=`None`",
         choices=["musev_referencenet"],
     )
     parser.add_argument(
         "--ip_adapter_model_cfg_path",
         type=str,
-        default=os.path.join(PROJECT_DIR, "./configs/model/ip_adapter.py"),
+        default="D:\\PyCharmWorkSpace\\VH\\MuseV\\configs\\model\\ip_adapter.py",
         help="Path to ip_adapter model config path",
     )
     parser.add_argument(
         "--ip_adapter_model_name",
         type=str,
-        default=None,
+        default="musev_referencenet",
         help="ip_adapter model name, None means do not use ip_adapter, default=`None`",
         choices=["musev_referencenet"],
     )
     parser.add_argument(
         "--vision_clip_model_path",
         type=str,
-        default="./checkpoints/ip_adapter/models/image_encoder",
+        default="D:\\PyCharmWorkSpace\\VH\\MuseV\\checkpoints\\IP-Adapter\\models\\image_encoder",
         help="vision_clip_extractor_class_name vision_clip_model_path, default=`./checkpoints/ip_adapter/models/image_encoder`",
     )
     parser.add_argument(
         "--vision_clip_extractor_class_name",
         type=str,
-        default=None,
+        default="ImageClipVisionFeatureExtractor",
         help="vision_clip_extractor_class_name None means according to ip_adapter_model_name, default=`None`",
         choices=["ImageClipVisionFeatureExtractor"],
     )
@@ -163,7 +164,7 @@ def parse_args():
     parser.add_argument(
         "--ip_adapter_face_model_cfg_path",
         type=str,
-        default=os.path.join(PROJECT_DIR, "./configs/model/ip_adapter.py"),
+        default=os.path.join(PROJECT_DIR, "D:\\PyCharmWorkSpace\\VH\\MuseV\\configs\\model\\ip_adapter.py"),
         help="Path to facein model config path",
     )
     parser.add_argument(
@@ -175,7 +176,7 @@ def parse_args():
     parser.add_argument(
         "--output_dir",
         type=str,
-        default=os.path.join(PROJECT_DIR, "results"),
+        default="D:\\PyCharmWorkSpace\\VH\\MuseV\\scripts\\inference\\output",
         help="Output directory, default=`musev/results`",
     )
     parser.add_argument(
@@ -217,7 +218,7 @@ def parse_args():
     parser.add_argument(
         "--fps",
         type=int,
-        default=4,
+        default=5,
         help="Frames per second for save video,default is same to of training, default=`4`",
     )
     parser.add_argument(
@@ -282,7 +283,7 @@ def parse_args():
     parser.add_argument(
         "--time_size",
         type=int,
-        default=12,
+        default=60,
         help="Number of frames to generate per iteration, same as of training, default=`12`",
     )
     parser.add_argument(
@@ -338,7 +339,7 @@ def parse_args():
     parser.add_argument(
         "--negprompt_cfg_path",
         type=str,
-        default=os.path.join(PROJECT_DIR, "configs/model/negative_prompt.py"),
+        default=os.path.join(PROJECT_DIR, "D:\\PyCharmWorkSpace\\VH\\MuseV\\configs\\model\\negative_prompt.py"),
         help="Path to the negtive prompt configuration file",
     )
     parser.add_argument(
@@ -456,7 +457,7 @@ def parse_args():
     )
     parser.add_argument(
         "--vae_model_path",
-        default="./checkpoints/vae/sd-vae-ft-mse",
+        default="D:\\PyCharmWorkSpace\\VH\\MuseV\\checkpoints\\vae\\sd-vae-ft-mse",
         type=str,
         help="vae path, default=`./checkpoints/vae/sd-vae-ft-mse`",
     )
@@ -646,17 +647,17 @@ n_repeat = args.n_repeat
 
 b = 1
 negative_embedding = [
-    ["./checkpoints/embedding/badhandv4.pt", "badhandv4"],
+    ["D:/PyCharmWorkSpace/VH/MuseV/checkpoints/embedding/badhandv4.pt", "badhandv4"],
     [
-        "./checkpoints/embedding/ng_deepnegative_v1_75t.pt",
+        "D:/PyCharmWorkSpace/VH/MuseV/checkpoints/embedding/ng_deepnegative_v1_75t.pt",
         "ng_deepnegative_v1_75t",
     ],
     [
-        "./checkpoints/embedding/EasyNegativeV2.safetensors",
+        "D:/PyCharmWorkSpace/VH/MuseV/checkpoints/embedding/EasyNegativeV2.safetensors",
         "EasyNegativeV2",
     ],
     [
-        "./checkpoints/embedding/bad_prompt_version2-neg.pt",
+        "D:/PyCharmWorkSpace/VH/MuseV/checkpoints/embedding/bad_prompt_version2-neg.pt",
         "bad_prompt_version2-neg",
     ],
 ]

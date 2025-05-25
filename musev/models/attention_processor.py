@@ -230,7 +230,7 @@ class T2IReferencenetIPAdapterXFormersAttnProcessor(BaseIPAttnProcessor):
                 1, 2
             )
 
-        query = attn.to_q(hidden_states, scale=scale)
+        query = attn.to_q(hidden_states)
 
         if encoder_hidden_states is None:
             encoder_hidden_states = hidden_states
@@ -241,8 +241,8 @@ class T2IReferencenetIPAdapterXFormersAttnProcessor(BaseIPAttnProcessor):
         encoder_hidden_states = align_repeat_tensor_single_dim(
             encoder_hidden_states, target_length=hidden_states.shape[0], dim=0
         )
-        key = attn.to_k(encoder_hidden_states, scale=scale)
-        value = attn.to_v(encoder_hidden_states, scale=scale)
+        key = attn.to_k(encoder_hidden_states)
+        value = attn.to_v(encoder_hidden_states)
 
         # for facein
         if self.print_idx == 0:
@@ -342,7 +342,7 @@ class T2IReferencenetIPAdapterXFormersAttnProcessor(BaseIPAttnProcessor):
         hidden_states = attn.batch_to_head_dim(hidden_states)
 
         # linear proj
-        hidden_states = attn.to_out[0](hidden_states, scale=scale)
+        hidden_states = attn.to_out[0](hidden_states)
         # dropout
         hidden_states = attn.to_out[1](hidden_states)
 
@@ -498,7 +498,7 @@ class NonParamT2ISelfReferenceXFormersAttnProcessor(BaseIPAttnProcessor):
                 1, 2
             )
 
-        query = attn.to_q(hidden_states, scale=scale)
+        query = attn.to_q(hidden_states)
 
         if encoder_hidden_states is None:
             encoder_hidden_states = hidden_states
@@ -509,8 +509,8 @@ class NonParamT2ISelfReferenceXFormersAttnProcessor(BaseIPAttnProcessor):
         encoder_hidden_states = align_repeat_tensor_single_dim(
             encoder_hidden_states, target_length=hidden_states.shape[0], dim=0
         )
-        key = attn.to_k(encoder_hidden_states, scale=scale)
-        value = attn.to_v(encoder_hidden_states, scale=scale)
+        key = attn.to_k(encoder_hidden_states)
+        value = attn.to_v(encoder_hidden_states)
 
         query = attn.head_to_batch_dim(query).contiguous()
         key = attn.head_to_batch_dim(key).contiguous()
@@ -528,7 +528,7 @@ class NonParamT2ISelfReferenceXFormersAttnProcessor(BaseIPAttnProcessor):
         hidden_states = attn.batch_to_head_dim(hidden_states)
 
         # linear proj
-        hidden_states = attn.to_out[0](hidden_states, scale=scale)
+        hidden_states = attn.to_out[0](hidden_states)
         # dropout
         hidden_states = attn.to_out[1](hidden_states)
 
@@ -703,7 +703,7 @@ class ReferEmbFuseAttention(IPAttention):
                 1, 2
             )
 
-        query = self.to_q(hidden_states, scale=scale)
+        query = self.to_q(hidden_states)
 
         if encoder_hidden_states is None:
             encoder_hidden_states = hidden_states
@@ -712,8 +712,8 @@ class ReferEmbFuseAttention(IPAttention):
                 encoder_hidden_states
             )
 
-        key = self.to_k(encoder_hidden_states, scale=scale)
-        value = self.to_v(encoder_hidden_states, scale=scale)
+        key = self.to_k(encoder_hidden_states)
+        value = self.to_v(encoder_hidden_states)
 
         query = self.head_to_batch_dim(query).contiguous()
         key = self.head_to_batch_dim(key).contiguous()
@@ -732,7 +732,7 @@ class ReferEmbFuseAttention(IPAttention):
         hidden_states = self.batch_to_head_dim(hidden_states)
 
         # linear proj
-        hidden_states = self.to_out[0](hidden_states, scale=scale)
+        hidden_states = self.to_out[0](hidden_states)
         # dropout
         hidden_states = self.to_out[1](hidden_states)
 

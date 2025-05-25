@@ -9,7 +9,7 @@
 #   img_length_ratio: float, generation video size is (height, width) * img_length_ratio
 
 # text/image2video
-- condition_images: ./data/images/yongen.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/yongen.jpeg
   eye_blinks_factor: 1.8
   height: 1308
   img_length_ratio: 0.957
@@ -19,7 +19,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 736
-- condition_images: ./data/images/jinkesi2.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/jinkesi2.jpeg
   eye_blinks_factor: 1.8
   height: 714
   img_length_ratio: 1.25
@@ -30,7 +30,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 563
-- condition_images: ./data/images/seaside4.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/seaside4.jpeg
   eye_blinks_factor: 1.8
   height: 317
   img_length_ratio: 2.221
@@ -40,7 +40,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 564
-- condition_images: ./data/images/seaside_girl.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/seaside_girl.jpeg
   eye_blinks_factor: 1.8
   height: 736
   img_length_ratio: 0.957
@@ -50,7 +50,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 736
-- condition_images: ./data/images/boy_play_guitar.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/boy_play_guitar.jpeg
   eye_blinks_factor: 1.8
   height: 846
   img_length_ratio: 1.248
@@ -60,7 +60,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 564
-- condition_images: ./data/images/girl_play_guitar2.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/girl_play_guitar2.jpeg
   eye_blinks_factor: 1.8
   height: 1002
   img_length_ratio: 1.248
@@ -70,7 +70,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 564
-- condition_images: ./data/images/boy_play_guitar2.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/boy_play_guitar2.jpeg
   eye_blinks_factor: 1.8
   height: 630
   img_length_ratio: 1.676
@@ -80,7 +80,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 420
-- condition_images: ./data/images/girl_play_guitar4.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/girl_play_guitar4.jpeg
   eye_blinks_factor: 1.8
   height: 846
   img_length_ratio: 1.248
@@ -90,7 +90,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 564
-- condition_images: ./data/images/dufu.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/dufu.jpeg
   eye_blinks_factor: 1.8
   height: 500
   img_length_ratio: 1.495
@@ -100,7 +100,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 471
-- condition_images: ./data/images/Mona_Lisa..jpg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/Mona_Lisa..jpg
   eye_blinks_factor: 1.8
   height: 894
   img_length_ratio: 1.173
@@ -111,7 +111,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 600
-- condition_images: ./data/images/Portrait-of-Dr.-Gachet.jpg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/Portrait-of-Dr.-Gachet.jpg
   eye_blinks_factor: 1.8
   height: 985
   img_length_ratio: 0.88
@@ -121,7 +121,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 800
-- condition_images: ./data/images/Self-Portrait-with-Cropped-Hair.jpg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/Self-Portrait-with-Cropped-Hair.jpg
   eye_blinks_factor: 1.8
   height: 565
   img_length_ratio: 1.246
@@ -131,7 +131,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 848
-- condition_images: ./data/images/The-Laughing-Cavalier.jpg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/The-Laughing-Cavalier.jpg
   eye_blinks_factor: 1.8
   height: 1462
   img_length_ratio: 0.587
@@ -143,7 +143,7 @@
   width: 1200
 
 # scene
-- condition_images: ./data/images/waterfall4.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/waterfall4.jpeg
   eye_blinks_factor: 1.8
   height: 846
   img_length_ratio: 1.248
@@ -154,7 +154,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 564
-- condition_images: ./data/images/river.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/river.jpeg
   eye_blinks_factor: 1.8
   height: 736
   img_length_ratio: 0.957
@@ -164,7 +164,7 @@
   refer_image: ${.condition_images}
   video_path: null
   width: 736
-- condition_images: ./data/images/seaside2.jpeg
+- condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/seaside2.jpeg
   eye_blinks_factor: 1.8
   height: 1313
   img_length_ratio: 0.957
@@ -178,8 +178,8 @@
 # video2video
 - name: "dance1"
   prompt: "(masterpiece, best quality, highres:1) , a girl is dancing, wearing a dress made of stars, animation"
-  video_path:  ./data/source_video/video1_girl_poseseq.mp4 
-  condition_images: ./data/images/spark_girl.png
+  video_path:  D:/PyCharmWorkSpace/VH/MuseV/data/source_video/video1_girl_poseseq.mp4 
+  condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/spark_girl.png
   refer_image: ${.condition_images}
   ipadapter_image: ${.condition_images}
   height: 960
@@ -189,8 +189,8 @@
 
 - name: "dance2"
   prompt: "(best quality), ((masterpiece)), (highres), illustration, original, extremely detailed wallpaper"
-  video_path:  ./data/source_video/video1_girl_poseseq.mp4 
-  condition_images: ./data/images/cyber_girl.png
+  video_path:  D:/PyCharmWorkSpace/VH/MuseV/data/source_video/video1_girl_poseseq.mp4 
+  condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/cyber_girl.png
   refer_image: ${.condition_images}
   ipadapter_image: ${.condition_images}
   height: 960
@@ -200,8 +200,8 @@
 
 - name: "duffy"
   prompt: "(best quality), ((masterpiece)), (highres), illustration, original, extremely detailed wallpaper"
-  video_path: ./data/source_video/pose-for-Duffy-4.mp4
-  condition_images: ./data/images/duffy.png
+  video_path: D:/PyCharmWorkSpace/VH/MuseV/data/source_video/pose-for-Duffy-4.mp4
+  condition_images: D:/PyCharmWorkSpace/VH/MuseV/data/images/duffy.png
   refer_image: ${.condition_images}
   ipadapter_image: ${.condition_images}
   height: 1280
