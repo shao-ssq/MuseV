@@ -14,7 +14,6 @@ import torch
 from einops import rearrange, repeat
 import cv2
 from PIL import Image
-from diffusers.models.autoencoder_kl import AutoencoderKL
 
 from mmcm.utils.load_util import load_pyhon_obj
 from mmcm.utils.seed_util import set_all_seed
@@ -100,7 +99,7 @@ args_dict = {
     "need_return_videos": False,
     "need_video2video": False,
     "negative_prompt": "V2",
-    "negprompt_cfg_path": "../../configs/model/negative_prompt.py",
+    "negprompt_cfg_path": "D:/PyCharmWorkSpace/VH/MuseV/configs/model/negative_prompt.py",
     "noise_type": "video_fusion",
     "num_inference_steps": 30,
     "output_dir": "./results/",
@@ -115,12 +114,12 @@ args_dict = {
     "redraw_condition_image_with_ipdapter": True,
     "redraw_condition_image_with_referencenet": True,
     "referencenet_image_path": None,
-    "referencenet_model_cfg_path": "../../configs/model/referencenet.py",
+    "referencenet_model_cfg_path": "D:/PyCharmWorkSpace/VH/MuseV/configs/model/referencenet.py",
     "referencenet_model_name": "musev_referencenet",
     "sample_rate": 1,
     "save_filetype": "mp4",
     "save_images": False,
-    "sd_model_cfg_path": "../../configs/model/T2I_all_model.py",
+    "sd_model_cfg_path": "D:/PyCharmWorkSpace/VH/MuseV/configs/model/T2I_all_model.py",
     "sd_model_name": "majicmixRealv6Fp16",
     "seed": None,
     "strength": 0.8,
@@ -141,7 +140,7 @@ args_dict = {
     "video_overlap": 1,
     "video_strength": 1.0,
     "vision_clip_extractor_class_name": "ImageClipVisionFeatureExtractor",
-    "vision_clip_model_path": "../../checkpoints/IP-Adapter/models/image_encoder",
+    "vision_clip_model_path": "D:/PyCharmWorkSpace/VH/MuseV/checkpoints/IP-Adapter/models/image_encoder",
     "w_ind_noise": 0.5,
     "which2video": "video_middle",
     "width": None,

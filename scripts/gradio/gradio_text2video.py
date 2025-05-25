@@ -51,9 +51,7 @@ if use_v2v_predictor:
 
 logger.setLevel("INFO")
 
-file_dir = os.path.dirname(__file__)
-PROJECT_DIR = os.path.join(os.path.dirname(__file__), "../..")
-DATA_DIR = os.path.join(PROJECT_DIR, "data")
+DATA_DIR = "D:\\PyCharmWorkSpace\\VH\\MuseV\\data"
 CACHE_PATH = "./t2v_input_image"
 
 
@@ -115,11 +113,11 @@ args_dict = {
     "redraw_condition_image_with_ipdapter": True,
     "redraw_condition_image_with_referencenet": True,
     "referencenet_image_path": None,
-    "referencenet_model_cfg_path": "../../configs/model/referencenet.py",
+    "referencenet_model_cfg_path": "D:/PyCharmWorkSpace/VH/MuseV/configs/model/referencenet.py",
     "referencenet_model_name": "musev_referencenet",
     "save_filetype": "mp4",
     "save_images": False,
-    "sd_model_cfg_path": "../../configs/model/T2I_all_model.py",
+    "sd_model_cfg_path": "D:/PyCharmWorkSpace/VH/MuseV/configs/model/T2I_all_model.py",
     "sd_model_name": "majicmixRealv6Fp16",
     "seed": None,
     "strength": 0.8,

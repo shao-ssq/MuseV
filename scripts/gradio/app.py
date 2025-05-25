@@ -9,8 +9,7 @@ import numpy as np
 
 from huggingface_hub import snapshot_download
 
-ProjectDir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-CheckpointsDir = os.path.join(ProjectDir, "checkpoints")
+CheckpointsDir = "D:\\PyCharmWorkSpace\\VH\\MuseV\\checkpoints"
 ignore_video2video = False
 max_image_edge = 1280
 
@@ -386,7 +385,7 @@ with gr.Blocks(css=css) as demo:
 
 
 # Set the IP and port
-ip_address = "0.0.0.0"  # Replace with your desired IP address
+ip_address = "127.0.0.1"  # Replace with your desired IP address
 port_number = 7860  # Replace with your desired port number
 
 
